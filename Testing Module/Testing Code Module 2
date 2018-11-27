@@ -1,0 +1,142 @@
+Testing Code Module 2
+
+Writing Test Code w/ JUnit & Java
+
+JUnit
+	- a testing framework from common problems
+	- others exist
+
+Cafe
+	Class for brewing coffee - including managing bean and milk
+
+	CoffeeType Enum of different types of coffee
+
+	Coffee a class for a single brew
+
+	public class CafeTest
+	{
+		// can brew espresso
+		// highlight run code
+		@Test
+		public void canBrewEspresso()
+		{
+			Cafe cafe = new Cafe();
+			cafe.restockBean(7);
+
+			Coffee coffee = cafe.brew(CoffeeType.Espresso)
+
+			//it is an espresso!
+			//no milk
+			// that we've got enough coffee
+			Assert.assertEquals(CoffeeType.Espresso, coffee.getType());
+			Assert.assertEquals(0,coffee.getMilk());
+			Assert.assertEquals(7,coffee.getBeans());
+		}
+	}
+
+	How to run a test on the Command line (maven)
+
+	ls
+	vim pom.xml
+	mvn clean test //recompile code
+
+	---
+
+	The Common Structure of Tests
+
+	3 Things to get Right
+
+	- Given - preconditions for the test
+		eg: skydiver must be up in the air
+	- When - The Behavior
+		eg: jump();
+	- Then: post condition
+		eg. The skydiver lands safely
+
+
+---
+
+	public class CafeTest
+	{
+
+
+		@Test
+		public void brewingEspressoConsumesBean()
+		{
+
+		//givene
+		Cafe cafe = new Cafe();
+		cafe.restockBean(7);
+
+		//when
+		Coffee cofee = cafe.brew(CoffeeType.Espresso);
+
+		//then
+		Assert.assertEquals(0,cafe.getBeansInStock());
+		}
+	}
+---
+
+Exceptions, Failures and Errors
+...because things eventually go wrong!
+
+- OUttside world
+- Test goes wrong
+
+Sometimes an exception is the correct result!
+
+Checking for exceptions
+
+@Test(expected = IllegalArgumentException.class)
+
+
+Benefits
+1. Able to test edge cases
+2. executed doc when errors occur
+
+Failure Vs. Error
+- Tried to check a behavior / At any point in the test
+- an assertion failed / An exception was thrown
+
+- Suggests the code is broken / suggests the test is broken
+
+---
+
+@Test(expected = IllegalStateException.class))
+public void latteesRequiresMilk()
+{
+	Cafe cafe = new Cafe();
+	cafe.restockBean(7);
+
+	cafe.brew(CoffeeType.Latte);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

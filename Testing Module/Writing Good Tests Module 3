@@ -1,0 +1,120 @@
+Writing Good Tests
+
+Good Test - Why Should we Care?
+	- We've seen the benefits
+		- cost
+			- Maintenance
+			- Readability
+			- Coupling
+	- Testes are code treat them like that
+
+Good Practices - what does a good test look like?
+	- WellNamed
+	- Behavior not Implementation
+	- DRY (don't repeate yourself)
+	- Diagnostics
+
+Why Name?
+	- Executable Documention
+	- Maintenance
+	- Readability
+	- Examples
+		naming Anti-Pattern 1
+			@Test
+			public void test1(){} eeeeekkkk
+		naming Anti Pattern 2 - what about espresso bean
+			@Test
+			public void espresso_bean(){}
+			@Test
+			public void restock(){}
+		Good Naming
+			@Test 
+			public void brewingEspressoConsumesBean(){}
+
+			@Test
+			public void shouldRestockBeans(){	}
+
+Naming Rules
+	- use domain terminology
+	- Natural Language
+	- be descriptive
+
+Behavior not Implementation
+	- Anti-Pattern
+		assertEquals(5,object.internalState);
+		assertEquals(5,object.getInternalState());
+	- Implementation Exposing private state results in brittle and hard to maintain tests
+	- Behavior
+	- Assert about the result of an operation
+	You can change the implementation and the test still passes
+
+Don't Repeat Yourself
+- set up and tear down code
+- Magic Number 
+
+Diagnostics
+
+should have been true but actually false
+always prefer assertEquals vs assertTrue
+
+Exposing a Reason (messages)
+
+---
+
+assertEquals("wrong coffee type",Espreeso,coffee.getType());
+
+cafeWithBeans
+utility methods
+
+ESPRESSO_BEANS
+
+---
+
+Before & After
+JUnit Practices
+- helps us implement best practices
+Annotations
+@Before,@After, every method
+
+@BeforeClass,@AfterClass beginning and ending of class
+
+Hamcrest - a compositional matcher library
+
+Matcher - a simple and gernal blob of logic used in assertions
+
+Compositional - matchers can combine multiple matchers
+
+requires dependency
+
+assertThat(values,Matchers.hasKey("B"))
+
+
+assertThat(numbers, hasitem(5))
+
+assertThat(coffee, hasproperty("beans",equalTo(ESPRESSO_BEANS));
+
+Summary
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

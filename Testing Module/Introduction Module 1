@@ -1,0 +1,81 @@
+mobile software development requires heavy testing
+
+Why?
+-technical
+-business
+	- Every month or so new version (update)
+		user retention
+			- 100,000 
+			- 95% are going to deleted/uninstall your app 
+			- 3 Primary Drivers
+				- social
+				- 
+
+			- we don't want bugs, testing is important
+			Agile and believes in Testing
+
+-----
+
+The challange is Java is not so much the language itself but wondering what we should test.
+<conceptual>
+
+making a test case is simple, a useful test case is abit of a challange
+
+Oriented to the value of testing AND what we need to test.
+
+- input --> 
+
+Union Test - functions of code
+
+
+The objective of today is to work on this first, send notes and code at the end of the training today, if we don't finish its HW
+
+
+--------------------------------------------
+
+
+Introduction to Testing in Java
+
+- Why Automate Testing?
+	- Why Automate Testing?
+		ex) The leaning Tower of Pisa (hard to fix when established)
+	- SOLUTION: solve a problem before it is too expensive to fix
+	- Software Testing
+		- achieves stakeholders goal*
+		- Meet functional requirements*
+		- Correctly handles corner cases*
+		- Performance (how fast)
+		- Usability ( is it good for the users)
+	- Automated Testing
+		- Delivers Reliability & Quality
+		- Removes fear of change
+
+
+- The Testing Hierarchy
+		- System
+		- Aggregate
+		- Unit
+	- Unit Test
+		- Test just a single unit of functionality
+			eg: Math.min(1,0)==0
+		- One class, method or small module
+		- No non-trivial dependencies
+		- Fast, but possibly brittle
+	- Aggregate Test
+		- Does a component do it job
+			eg: Persistence repository can list saved Albums for an Artist
+		- slower, less brittle
+	- System or "End to End"
+		- Check that the application meets it requirements
+		- Slowest, requires the ability to run the app
+
+- Course Overview
+	- Testing Code
+	- Writing Good Test
+	- Introduce TDD (test driven development )
+	- Building Classes from Tests
+	- Dependencies
+	- Going outside-in
+
+	
+

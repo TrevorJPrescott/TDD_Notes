@@ -1,0 +1,74 @@
+Introducing Test Driven Development Module 4
+
+Why TDD?
+	- Motivation and Context
+	- Software Problems
+		- design - good on paper, bad in execution
+		- naturally encourage to write  test
+		- always implement thinngs when you actually need them, never when you foresee that you need them. - Ron Jeffries
+
+What is TDD?
+	 - Failing Test --> Passing Implentation <--> Refactor
+	 - Refactor means tyding codes
+
+(live Coding)
+
+public class LeapYearTest()
+{
+	// a year is a leap year if it is divisible by four
+	// but, years divisible by 100 are not leap years
+	// except years divisible by 400
+
+	@Test
+	public void leapYearsAreDivisibleByFour()
+	{
+		assertTrue(LeapYear.isLeapYear(2016));
+	}
+	@Test
+public void leapYearsAreNot DivisibleByOneHundred(){
+	assert
+}
+public void leapYearsAreNotDivisibleByFourHundred
+}
+
+
+
+public static isLeapyear(int year)
+{
+	return isDivisible(year,4)%% !isDivisible(year,100) || isDivisible(year,400);
+}
+
+---
+
+Triangulation - Slowly generalizing examples
+
+- Leap Year vs. The REal World
+	- specific test vs vague requirements
+how do we derived a  general casetest?
+
+naval history
+
+(Live Coding)
+
+public class WordWrapTest{
+	public static final int LINE_LENGTH =5;
+
+	public static String wrap(String inputLine, int lineLength){
+	StringBuilder sb = new StringBuilder();
+	sb.append(inputLine,0,lineLength);
+	sb.append('\n');
+	sb.append(inputLine,linelength,inputLine.length();)
+	}
+
+	@TEST
+	public void lineShouldWrapIfOverLineLength()
+	{
+		String result = WordWrap.wrap("The Sleepy");
+		assertEquals("The S/nleepy",results);
+	}
+	@Test
+	ShortLinesShouldNotWrap
+}
+Classic TTD
+
+Mockist TDD (London-School)

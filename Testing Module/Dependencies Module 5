@@ -1,0 +1,47 @@
+Dependencies Module 5
+
+What are we Covering
+- Dependencies
+- Dependency Injection
+- Stubs
+- Mocks
+
+---
+
+- Dependency: a relationship between two components where the functionality of one component reliles on another component.
+
+	eg: CsvRepo --> AnalysisService --> Report
+
+	we want test isolation!
+
+	we want to test just one thing
+	We have coupled archetecture
+
+
+---
+
+Dependency Injection:
+	- instead of each class moving up, it has a constructor parameter which will take in from 
+
+	Framework/Configuration separation from Business Logic
+
+
+
+Test Doubles:
+
+- a crash dummy:
+
+- Fake
+	- Working Implementation, but is much simpler than a real one.
+- Stub
+	-a Ready-made answer to method calls
+- Mock
+	- Take the interactions with the objects
+
+	mockito
+
+	Spring for complicated programs
+
+	Guise is also for complicated programs
+
+	
